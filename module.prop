@@ -1,6 +1,6 @@
 id=DisCal
 name=Display Calibration
 version=v1.25 for better experience
-versionCode=125
+versionCode=1250
 author=Adinata | @Adivenxnataly
 description=Enhance Display Calibration for universal Android devices (this module using surfaceflinger, so u can change the value manually from 1.0 - 1.5).
