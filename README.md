@@ -3,10 +3,12 @@
 Enhance Display Calibration for universal Android devices (this module using surfaceflinger, so u can change the value manually from 1.0 - 1.5).
 
  service running :
-  - `service call SurfaceFlinger 1022 f 1.25`
+ 
+    service call SurfaceFlinger 1022 f 1.25
  
  persistent on boot :
-  - `resetprop -n persist.sys.sf.color_saturation 1.25`
+ 
+    resetprop -n persist.sys.sf.color_saturation 1.25
 
  *default value 1.0, maximum value 1.5
 
