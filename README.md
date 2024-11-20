@@ -16,7 +16,7 @@ Enhance Display Calibration for universal Android devices (this module using sur
 
     dumpsys SurfaceFlinger | grep -A 15 "DesiredDisplayModeSpecs"
 
- focus on "app: state=", if the description is "app: state=Vsync" it means your device is using VSYNC. then try the following command, if the description is "app: state=Idle", then the device has disabled VSYNC.
+ focus on "app: state=", if the description is "Vsync" it means your device is using VSYNC. then try the following command, if the description is "Idle", then the device has disabled VSYNC.
  
  Disable VSYNC:
 
