@@ -2,7 +2,7 @@
 
 Enhance Display Calibration for universal Android devices (this module using surfaceflinger, so u can change the value manually from 1.0 - 1.5).
 
- service running :
+ service running (with terminal use su access) :
  
     service call SurfaceFlinger 1022 f 1.25
  
@@ -10,8 +10,19 @@ Enhance Display Calibration for universal Android devices (this module using sur
  
     resetprop -n persist.sys.sf.color_saturation 1.25
 
- *default value 1.0, maximum value 1.5
+ *default value 1.0, maximum value 2.0
 
+ for new release x.0-201, use disable VSYNC for better experience. before you install this version, try to find out if the device you are using uses VSYNC, with the command:
+
+    dumpsys SurfaceFlinger | grep -A 15 "DesiredDisplayModeSpecs"
+
+ focus on "app: state=", if the description is "app: state=Vsync" it means your device is using VSYNC. then try the following command, if the description is "app: state=Idle", then the device has disabled VSYNC.
+ 
+ Disable VSYNC:
+
+    service call SurfaceFlinger 1036 i32 0
+
+ *value: 0 for disable, 1 for enable.
  
 ## Requirement
  this is module version so install using Magisk app.
