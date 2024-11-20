@@ -1,6 +1,6 @@
 ## Display Calibration 
 
-Enhance Display Calibration for universal Android devices (this module using surfaceflinger, so u can change the value manually from 1.0 - 1.5).
+Enhance Display Calibration for universal Android devices (this module using surfaceflinger, so u can change the value manually from 1.0 - 2.0).
 
  service running (with terminal use su access) :
  
