@@ -12,6 +12,7 @@ Enhance Display Calibration for universal Android devices (this module using sur
 
  *default value 1.0, maximum value 2.0
 
+
  for new release x.x-200, use disable VSYNC for better experience. before you install this version, try to find out if the device you are using uses VSYNC, with the command:
 
     dumpsys SurfaceFlinger | grep -A 15 "DesiredDisplayModeSpecs"
