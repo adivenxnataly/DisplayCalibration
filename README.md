@@ -24,6 +24,11 @@ Enhance Display Calibration for universal Android devices (this module using sur
     service call SurfaceFlinger 1036 i32 0
 
  *value: 0 for disable, 1 for enable.
+
+ If the description remains "Vsync" instead of "Idle", then you must restart the surfaceflinger with the following steps:
+ - open terminal (adb, Termux, etc.) run with root access `su`
+ - then, `stop surfaceflinger` and reboot manually by pressing the power button.
+ - done!
  
 ## Requirement
  this is module version so install using Magisk app.
