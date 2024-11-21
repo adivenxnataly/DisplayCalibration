@@ -31,9 +31,9 @@ Enhance Display Calibration for universal Android devices (this module using sur
  *does not cause softbrick or bootloop.
  
 ## Warning!
- *do not downgrade the module, change the value manually in the directory:
+ *do not downgrade the module, change the value manually in the root directory:
 
-   /data/adb/modules/DisCal/service.sh
+    /data/adb/modules/DisCal/service.sh
 
   open the manual file with a text editor (with superuser permission), change the values, save, then reboot, done!
   
