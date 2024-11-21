@@ -29,7 +29,14 @@ Enhance Display Calibration for universal Android devices (this module using sur
  this is module version so install using Magisk app.
 
  *does not cause softbrick or bootloop.
+ 
+## Warning!
+ *do not downgrade the version, change the value manually in the directory:
 
+   /data/adb/modules/DisCal/service.sh
+
+  open the manual file with a text editor (with superuser permission), change the values, save, then reboot, done!
+  
 ## Tested on
   - Android 11 - MIUI 12.5
   - Android 12 - MIUI 13
