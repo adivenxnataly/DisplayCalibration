@@ -6,11 +6,12 @@ Enhance Display Calibration for universal Android devices (this module using sur
  
     service call SurfaceFlinger 1022 f 1.25
  
- persistent on boot (property):
+ persistent on boot (property) :
  
     resetprop -n persist.sys.sf.color_saturation 1.25
 
  *default value 1.0, maximum value 2.0
+
 
 
 • for new release x.x-200, using disable VSYNC for better experience. before you install this version, try to find out if the device you are using uses VSYNC, with the command:
