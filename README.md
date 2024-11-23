@@ -30,7 +30,7 @@ Enhance Display Calibration for universal Android devices (this module using sur
  - done!
  
 ## Requirement
- this is module version so install using Magisk app.
+ this is module version so install using Magisk app:
  [Download from Release page](https://github.com/adivenxnataly/DisplayCalibration/releases)
  
  *does not cause softbrick or bootloop.
