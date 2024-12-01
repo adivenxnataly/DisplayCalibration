@@ -14,9 +14,9 @@ Enhance Color Saturation for universal Android devices (this module using surfac
 
  *default value 1.0, maximum value 2.0
 
+**New Version** :
 
-
-• for new release x.x-200, using disable VSYNC for better experience. before you install this version, try to find out if the device you are using uses VSYNC, with the command:
+for new version `x.x-200` using disable VSYNC for better experience. before you install this version, try to find out if the device you are using uses VSYNC, with the command:
 
     dumpsys SurfaceFlinger | grep -A 15 "DesiredDisplayModeSpecs"
 
