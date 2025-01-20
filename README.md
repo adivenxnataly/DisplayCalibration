@@ -12,9 +12,9 @@ Enhance Color Saturation for universal Android devices (this module using surfac
  
     resetprop -n persist.sys.sf.color_saturation 1.25
 
- *default value 1.0, maximum value 2.0
+ > default value 1.0, maximum value 2.0
 
-**New Version** :
+**New Version** x.x-200 :
 
 for new version `x.x-200` using disable VSYNC for better experience. before you install this version, try to find out if the device you are using uses VSYNC, with the command:
 
@@ -24,13 +24,24 @@ for new version `x.x-200` using disable VSYNC for better experience. before you 
 
     service call SurfaceFlinger 1036 i32 0
 
- *value: 0 for disable, 1 for enable.
+ > value: 0 for disable, 1 for enable.
 
  If you have installed but the description remains "Vsync" instead of "Idle", then you must restart the surfaceflinger with the following steps:
  - open terminal (adb, Termux, etc.) run with root access `su`
  - then, `stop surfaceflinger` and reboot manually by pressing the power button.
  - done!
- 
+
+ **New Version** x.x-x10 :
+
+ for new version `xx-x10` using Color Matrix (RGB) Dominan for increase Dynamic Range (brightness and darkness).
+ with this command:
+
+     service call SurfaceFlinger 1015 i32 1 f 1.05 f 0 f 0 f 0 f 0 f 1.05 f 0 f 0 f 0 f 0 f 1.05 f 0 f 0 f 0 f 0 f 1
+
+ `f 1.05` (first) for Red 🔴, `f 1.05` (second) for green 🟢, `f 1.05` (third) for blue 🔵.
+ > the correct value (in my opinion) is `1.05`, because above that would make it very excessive.
+ > default value is `f 1`
+
 ## Requirement
  this is module version so install using Magisk app:
  [Download from Release page](https://github.com/adivenxnataly/DisplayCalibration/releases)
