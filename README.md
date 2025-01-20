@@ -1,6 +1,6 @@
 ## Display Calibration 
 
-![](https://github.com/adivenxnataly/DisplayCalibration/blob/main/files/banner.png)
+![banner](https://github.com/adivenxnataly/DisplayCalibration/blob/main/files/banner2.png)
 
 Enhance Color Saturation for universal Android devices (this module using surfaceflinger, so u can change the value manually from 1.0 - 2.0).
 
@@ -42,6 +42,9 @@ for new version `x.x-200` using disable VSYNC for better experience. before you 
  > the correct value (in my opinion) is `1.05`, because above that would make it very excessive.
  > default value is `f 1`
 
+## The Result
+ ![](https://github.com/adivenxnataly/DisplayCalibration/blob/main/files/compareimg.png)
+ 
 ## Requirement
  this is module version so install using Magisk app:
  [Download from Release page](https://github.com/adivenxnataly/DisplayCalibration/releases)
