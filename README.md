@@ -42,6 +42,10 @@ for new version `x.x-200` using disable VSYNC for better experience. before you 
  > the correct value (in my opinion) is `1.05`, because above that would make it very excessive.
  > default value is `f 1`
 
+ • for disable ColorMatrix to restore DynamicRange setting to default:
+
+     service call SurfaceFlinger 1015 i32 0
+
 ## The Result
  ![](https://github.com/adivenxnataly/DisplayCalibration/blob/main/files/compareimg.png)
  
