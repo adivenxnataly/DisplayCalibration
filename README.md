@@ -2,7 +2,8 @@
 
 ![banner](https://github.com/adivenxnataly/DisplayCalibration/blob/main/files/banner2.png)
 
-Enhance Color Saturation for universal Android devices (this module using surfaceflinger, so u can change the value manually from 1.0 - 2.0).
+Enhance Color Saturation for universal Android devices.
+>this module using surfaceflinger, for color saturation  u can change the value manually from 1.0 - 2.0.
 
  service running, with terminal use `su` (superuser) access :
  
@@ -20,29 +21,30 @@ for new version `x.x-200` using disable VSYNC for better experience. before you 
 
     dumpsys SurfaceFlinger | grep -A 15 "DesiredDisplayModeSpecs"
 
- focus on `"app: state="` if the description is "Vsync" it means your device is using VSYNC, if the description is "Idle" then the device is using disable VSYNC. with the command:
+ focus on `"app: state="` if the description is `Vsync` it means your device is using VSYNC, if the description is `Idle` then the device is using disable VSYNC. with the command:
 
     service call SurfaceFlinger 1036 i32 0
 
  > value: 0 for disable, 1 for enable.
 
- If you have installed but the description remains "Vsync" instead of "Idle", then you must restart the surfaceflinger with the following steps:
+ If you have installed but the description remains `Vsync` instead of `Idle`, then you must restart the surfaceflinger with the following steps:
  - open terminal (adb, Termux, etc.) run with root access `su`
  - then, `stop surfaceflinger` and reboot manually by pressing the power button.
  - done!
 
  **New Version** x.x-x10 :
 
- for new version `xx-x10` using Color Matrix (RGB) Dominan for increase Dynamic Range (brightness and darkness).
+ for new version `xx-x10` using Color Matrix (RGBA) Dominan for increase DynamicRange (brightness and darkness).
  with this command:
 
-     service call SurfaceFlinger 1015 i32 1 f 1.05 f 0 f 0 f 0 f 0 f 1.05 f 0 f 0 f 0 f 0 f 1.05 f 0 f 0 f 0 f 0 f 1
+     service call SurfaceFlinger 1015 i32 1 f 1.05 f 0 f 0 f 0 f 0 f 1.05 f 0 f 0 f 0 f 0 f 1.05
 
- `f 1.05` (first) for Red 🔴, `f 1.05` (second) for green 🟢, `f 1.05` (third) for blue 🔵.
- > the correct value (in my opinion) is `1.05`, because above that would make it very excessive.
- > default value is `f 1`
+ `f 1.05` (first) for Red 🔴, `f 1.05` (second) for Green 🟢, `f 1.05` (third) for Blue 🔵, and last for Alpha ⚪.
+ > the configuration for f values is like this: `R G B A R G B A R G B A` and change R G B in different places, so it's not directly `R G B A`: `service call SurfaceFlinger 1015 i32 1 f 1.05 f 1.05 f 1.05` and not use value for alpha.
 
- • for disable ColorMatrix to restore DynamicRange setting to default:
+ > value: 0 - 1 (normal), but in this module used 1.05 to make it stronger (not recommended).
+
+ • for disable ColorMatrix to restore to default:
 
      service call SurfaceFlinger 1015 i32 0
 
