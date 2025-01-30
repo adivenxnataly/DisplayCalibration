@@ -40,7 +40,7 @@ for new version `x.x-200` using disable VSYNC for better experience. before you 
      service call SurfaceFlinger 1015 i32 1 f 1.05 f 0 f 0 f 0 f 0 f 1.05 f 0 f 0 f 0 f 0 f 1.05
 
  `f 1.05` (first) for Red 🔴, `f 1.05` (second) for Green 🟢, `f 1.05` (third) for Blue 🔵, and last for Alpha ⚪.
- > the configuration for f values is like this: `R G B A R G B A R G B A` and change R G B in different places, so it's not directly `R G B A`: `service call SurfaceFlinger 1015 i32 1 f 1.05 f 1.05 f 1.05` and not use value for alpha.
+ > the configuration for f (float) values is like this: `R G B A R G B A R G B A` and change R G B in different places, so it's not directly `R G B A`: `service call SurfaceFlinger 1015 i32 1 f 1.05 f 1.05 f 1.05` and not use value for alpha.
 
  > value: 0 - 1 (normal), but in this module used 1.05 to make it stronger (not recommended).
 
