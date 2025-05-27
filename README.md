@@ -8,7 +8,6 @@
 
 > [!warning]
 > I didn't combine them all because there was a bug when combining **DynamicRange** and **Disable VSYNC**, which resulted in a crash on the surfaceflinger resulting in a blank screen.
-<br>
 
 ### Color Saturation
 > [!NOTE]
@@ -69,8 +68,6 @@
  • for disable ColorMatrix to restore to default:
 
      service call SurfaceFlinger 1015 i32 0
-
-<br>
 
 ## The Result
  ![](https://github.com/adivenxnataly/DisplayCalibration/blob/main/files/compareimg.png)
