@@ -36,16 +36,23 @@
 
     dumpsys SurfaceFlinger | grep -A 15 "DesiredDisplayModeSpecs"
 
- focus on `"app: state="` if the description is `Vsync` it means your device is using VSYNC, if the description is `Idle` then the device is using disable VSYNC. with the command:
+ | output | VSYNC |
+ |:-------|:------|
+ | Idle   | disable |
+ | Vsync  | enable |
+ 
+ focus on `"app: state="` if the description is `Vsync` it means your device is using VSYNC, if the description is `Idle` then the device is using disable VSYNC.
+ with the command:
 
     service call SurfaceFlinger 1036 i32 0
 
  > value: 0 for disable, 1 for enable.
 
- If you have installed but the description remains `Vsync` instead of `Idle`, then you must restart the surfaceflinger with the following steps:
- - open terminal (adb, Termux, etc.) run with root access `su`
- - then, `stop surfaceflinger` and reboot manually by pressing the power button.
- - done!
+> [!caution]
+> If you have installed but the description remains `Vsync` instead of `Idle`, then you must restart the surfaceflinger with the following steps:
+> - open terminal (adb, Termux, etc.) run with root access `su`
+> - then, `stop surfaceflinger` (ur screen automatically goes blank) and reboot manually by pressing the power button.
+> - done!
 
 ### DynamicRange
 > [!note]
